@@ -28,9 +28,11 @@ const OrderButton = ({ inverted = false, onClick }: Props) => {
       } cta rounded-xl py-2 px-4 w-full sm:w-max flex flex-col`}
     >
       <span className='uppercase font-semibold'>
-        Eu quero encomendar uma maquina
+        Sim, Eu quero começar hoje a emagrecer
       </span>
-      <span className='text-sm w-full'>Entrega de 2 a 7 dias</span>
+      <span className='text-sm w-full'>
+        Satisfação garantida ou dinheiro devolvido
+      </span>
     </button>
   );
 };
