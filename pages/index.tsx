@@ -37,6 +37,7 @@ import Review from '../components/Review';
 import Timer from '../components/Timer';
 import MiniCheckIcon from '../assets/icons/MiniCheck';
 import GiftIcon from '../assets/icons/Gift';
+import Example from '../components/Modals/PaymentModal';
 
 const LandingPage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -158,7 +159,8 @@ const LandingPage = () => {
         </section>
         <section className='w-full my-8 px-4'>
           <div className='container mx-auto flex justify-center'>
-            {isOpen && <Modal setIsOpen={setIsOpen} />}
+            <Example isOpen={isOpen} setIsOpen={setIsOpen} />
+
             <OrderButton onClick={() => setIsOpen(true)} />
           </div>
         </section>
@@ -533,7 +535,7 @@ const LandingPage = () => {
         <section className='w-full bg-cricut-green py-12 px-4 text-white italic clip-right text-center'>
           <div className='container mx-auto'>
             <h2 className='text-2xl md:text-3xl font-semibold'>
-              Um e-book complementa o outro. Você irá os usar 2 juntos para
+              Um e-book complementa o outro. Você irá usar os 2 juntos para
               expulsar de 5 a 10kg em 30 dias!
             </h2>
           </div>
@@ -609,7 +611,12 @@ const LandingPage = () => {
               </p>
             </div>
             <div className='max-w-md'>
-              <Image src={MpesaIcon} alt='Cricut explore air 2 image' />
+              <Image
+                objectFit='contain'
+                height={350}
+                src={Ebook1}
+                alt='Cricut explore air 2 image'
+              />
             </div>
             <p className='text-2xl md:text-3xl mb-4'>⬇️⬇️⬇️</p>
             <OrderButton onClick={() => setIsOpen(true)} inverted />
