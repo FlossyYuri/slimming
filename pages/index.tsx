@@ -4,40 +4,40 @@ import { useState } from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 import ChatIcon from '../assets/icons/Chat';
 import CheckIcon from '../assets/icons/Check';
+import GiftIcon from '../assets/icons/Gift';
+import MiniCheckIcon from '../assets/icons/MiniCheck';
 import PersonIcon from '../assets/icons/Person';
 import SecurityIcon from '../assets/icons/security';
 import StarIcon from '../assets/icons/Star';
-import TestimonialImage from '../assets/image/testimonial.png';
+import BalancaImage from '../assets/image/balanca.png';
 import CompraSeguraImage from '../assets/image/comprasegura.png';
 import LogoIcon from '../assets/image/icon.png';
-import MpesaIcon from '../assets/image/mpesa.png';
-import Ebook1 from '../assets/image/smartmockups_kgmrtro3.png';
-import Ebook2 from '../assets/image/smartmockups_kgmruzjm.png';
 import MenuImage from '../assets/image/menu.png';
-import BalancaImage from '../assets/image/balanca.png';
-import Review1 from '../assets/image/reviews/d1.jpeg';
-import Review2 from '../assets/image/reviews/d2.jpg';
-import Review3 from '../assets/image/reviews/d3.png';
+import MpesaIcon from '../assets/image/mpesa.png';
+import MZFlag from '../assets/image/mzlogo.png';
+import Ponto24Icon from '../assets/image/ponto-24.png';
 import Bebida1 from '../assets/image/reviews/1.png';
 import Bebida2 from '../assets/image/reviews/2.png';
 import Bebida3 from '../assets/image/reviews/3.png';
 import Bebida4 from '../assets/image/reviews/4.jpg';
 import Bebida5 from '../assets/image/reviews/5.jpg';
 import Bebida6 from '../assets/image/reviews/6.jpg';
-import MZFlag from '../assets/image/mzlogo.png';
-import Ponto24Icon from '../assets/image/ponto-24.png';
+import Review1 from '../assets/image/reviews/d1.jpeg';
+import Review2 from '../assets/image/reviews/d2.jpg';
+import Review3 from '../assets/image/reviews/d3.png';
 import SeloImage from '../assets/image/selo.png';
+import Ebook1 from '../assets/image/smartmockups_kgmrtro3.png';
+import Ebook2 from '../assets/image/smartmockups_kgmruzjm.png';
+import TestimonialImage from '../assets/image/testimonial.png';
 import VisaIcon from '../assets/image/visa.png';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import MetaPixel from '../components/MetaPixel';
-import Modal from '../components/Modals/PaymentIntructions';
+import PaymentModal from '../components/Modals/PaymentModal';
 import OrderButton from '../components/OrderButton';
 import Review from '../components/Review';
 import Timer from '../components/Timer';
-import MiniCheckIcon from '../assets/icons/MiniCheck';
-import GiftIcon from '../assets/icons/Gift';
-import Example from '../components/Modals/PaymentModal';
+import { Toaster } from 'react-hot-toast';
 
 const LandingPage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -159,7 +159,7 @@ const LandingPage = () => {
         </section>
         <section className='w-full my-8 px-4'>
           <div className='container mx-auto flex justify-center'>
-            <Example isOpen={isOpen} setIsOpen={setIsOpen} />
+            <PaymentModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
             <OrderButton onClick={() => setIsOpen(true)} />
           </div>
@@ -742,6 +742,7 @@ const LandingPage = () => {
       </Head>
       <Footer />
       <MetaPixel />
+      <Toaster />
     </>
   );
 };

@@ -7,6 +7,7 @@ const FAQ = () => (
       </h2>
       <section className='flex flex-col gap-4 mt-4'>
         <Collapsible
+          id='1'
           trigger='Quais os maiores benefícios que o programa irá me proporcionar?'
           triggerClassName='font-semibold'
           contentInnerClassName='py-4 border-t-2 border-cricut-green border-opacity-50 '
@@ -17,6 +18,7 @@ const FAQ = () => (
           </p>
         </Collapsible>
         <Collapsible
+          id='2'
           trigger='Tenho que pagar todos os meses para continuar participando?'
           triggerClassName='font-semibold'
           contentInnerClassName='py-4 border-t-2 border-cricut-green border-opacity-50 '
@@ -27,6 +29,7 @@ const FAQ = () => (
           </p>
         </Collapsible>
         <Collapsible
+          id='3'
           trigger='Em quanto tempo eu posso começar a ver resultados?'
           triggerClassName='font-semibold'
           contentInnerClassName='py-4 border-t-2 border-cricut-green border-opacity-50 '
@@ -38,6 +41,7 @@ const FAQ = () => (
           </p>
         </Collapsible>
         <Collapsible
+          id='4'
           trigger=' Meu dia é corrido e não tenho muito tempo. O programa vai me ajudar?'
           triggerClassName='font-semibold'
           contentInnerClassName='py-4 border-t-2 border-cricut-green border-opacity-50 '
@@ -48,6 +52,7 @@ const FAQ = () => (
           </p>
         </Collapsible>
         <Collapsible
+          id='5'
           trigger='A partir do momento que eu compro,em quanto tempo eu recebo o conteúdo?'
           triggerClassName='font-semibold'
           contentInnerClassName='py-4 border-t-2 border-cricut-green border-opacity-50 '
@@ -58,6 +63,7 @@ const FAQ = () => (
           </p>
         </Collapsible>
         <Collapsible
+          id='45'
           trigger='Eu nunca fiz uma reeducação alimentar antes, será que eu consigo?'
           triggerClassName='font-semibold'
           contentInnerClassName='py-4 border-t-2 border-cricut-green border-opacity-50 '
