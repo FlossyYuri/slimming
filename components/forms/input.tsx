@@ -5,6 +5,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   register: UseFormRegister<any>;
   name: string;
   label?: string;
+  description?: string;
   error?: boolean;
   helperText?: string;
 }
@@ -15,6 +16,7 @@ const Input = ({
   error,
   name,
   helperText,
+  description,
   type = 'text',
   ...rest
 }: Props): JSX.Element => {
@@ -28,6 +30,9 @@ const Input = ({
         type={type}
         {...register(name, { required: true })}
       />
+      {description && (
+        <span className='text-slate-500 text-sm'>{description}</span>
+      )}
       {error && <span className='error text-red-500'>{helperText}</span>}
     </div>
   );

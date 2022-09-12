@@ -45,21 +45,20 @@ export default function PaymentModal({ setIsOpen, isOpen }: Props) {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>({
     resolver: yupResolver(schema),
     defaultValues: {
-      fullName: 'Emerson Yuri',
-      phone: '851755378',
       email: 'emerson.yur@gmail.com',
+      fullName: 'Emerson Yuri',
       mpesaNumber: 851755378,
+      phone: '851755378',
     },
   });
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     setLoading(true);
     axios
-      .post('http://localhost:5000/test/pay2', {
+      .post('https://mpesanode.herokuapp.com/payEbook', {
         channel: 'EBOOK',
         username: 'EMAGRECER',
         amount: 497,
@@ -156,6 +155,7 @@ export default function PaymentModal({ setIsOpen, isOpen }: Props) {
                     <Input
                       name='email'
                       register={register}
+                      description='Escreva um email que você usa pois receberá automaticamente um email com instruções para acessar o produto.'
                       error={!!errors}
                       helperText={errors.email?.message}
                       placeholder='Endereço de email'

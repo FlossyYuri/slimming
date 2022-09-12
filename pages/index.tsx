@@ -518,15 +518,14 @@ const LandingPage = () => {
                       sugestões de cardápios.
                     </span>
                   </li>
-                  <li className='flex items-center'>
-                    <div className='w-8 mr-4'>
-                      <GiftIcon />
-                    </div>
-                    <span>
-                      ACESSO AO NOSSO GRUPO VIP NO FACEBOOK COM MAIS DE 75 MIL
-                      PESSOAS
-                    </span>
-                  </li>
+                  {/* <li className='flex items-center'>
+                      <div className='w-8 mr-4'>
+                        <GiftIcon />
+                      </div>
+                      <span>
+                        -
+                      </span>
+                    </li> */}
                 </ul>
               </div>
             </div>
@@ -542,20 +541,49 @@ const LandingPage = () => {
         </section>
         <section className='w-full py-16 px-4 text-center'>
           <div className='container mx-auto'>
+            <div
+              className='wistia_responsive_padding relative'
+              style={{ padding: '133.13% 0 0 0' }}
+            >
+              <div
+                className='wistia_responsive_wrapper absolute top-0 left-0'
+                style={{
+                  height: '100%',
+                  width: '100%',
+                }}
+              >
+                <iframe
+                  src='https://fast.wistia.net/embed/iframe/iyg0cs19cg?seo=false&videoFoam=true'
+                  title='Receitas para emagrecer Video'
+                  allow='autoplay; fullscreen'
+                  allowTransparency
+                  frameBorder='0'
+                  scrolling='no'
+                  className='wistia_embed'
+                  name='wistia_embed'
+                  width='100%'
+                  height='100%'
+                ></iframe>
+              </div>
+            </div>
+            <script
+              src='https://fast.wistia.net/assets/external/E-v1.js'
+              async
+            ></script>
             <h3 className='text-xl font-bold mt-4'>
               Veja no vídeo acima você vai entender melhor como funciona o
               programa na prática
             </h3>
             <p className='mt-8'>
-              Ao adquirir o programa você receberá o seu material você vai
-              abri-lo e entrar na terceira página e clicar no botão para ser
-              redirecionada para o nosso Grupo Vip. A partir esse momento você
-              será acompanhada por nós e estará juntas com as outras meninas.
+              Ao adquirir o programa você receberá o seu material
+              automaticamente pelo seu email. Ao baixar-lo, nele terá as
+              instruções passo a passo para você seguir com programa e garantir
+              seus resultados.
             </p>
             <p className='mt-8 text-2xl'>
               Um programa 100% animado com milhares de pessoas buscando os
               mesmos objetivos que os seus. Será incrível, motivador e essa
-              semana está com um valor mais barato que um Hambúrguer...
+              semana está com um valor mais barato que uma Pizza...
             </p>
           </div>
         </section>
@@ -738,7 +766,7 @@ const LandingPage = () => {
           content='https://cricutexplore.flossyyuri.com/'
         />
         <meta property='og:type' content='website' />
-        {/* <meta property='og:image' content={OGImage.src} /> */}
+        <meta property='og:image' content={LogoIcon.src} />
       </Head>
       <Footer />
       <MetaPixel />
