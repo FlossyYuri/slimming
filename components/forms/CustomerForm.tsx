@@ -22,19 +22,34 @@ const CustomerForm = () => {
         <h2>Detalhes de Faturamento</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input
-            {...register('fullName', { required: true })}
+            name='fullName'
+            register={register}
+            error={!!errors}
+            helperText={errors.phone?.message}
             placeholder='Nome Completo'
           />
           <Input
             {...register('phone', { required: true })}
+            name='phone'
+            register={register}
+            error={!!errors}
+            helperText={errors.phone?.message}
             placeholder='Numero de celular'
           />
           <Input
             {...register('email', { required: true })}
+            name='email'
+            register={register}
+            error={!!errors}
+            helperText={errors.email?.message}
             placeholder='Endereço de email'
           />
           <Input
             {...register('emailConfirmation', { required: true })}
+            name='emailConfirmation'
+            register={register}
+            error={!!errors}
+            helperText={errors.emailConfirmation?.message}
             placeholder='Confirmação de endereço de email'
           />
           <input type='submit' />
