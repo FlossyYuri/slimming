@@ -2,6 +2,7 @@ import { Dialog, Tab, Transition } from '@headlessui/react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { Fragment, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
@@ -41,6 +42,7 @@ interface Props {
 }
 export default function PaymentModal({ setIsOpen, isOpen }: Props) {
   const [loading, setLoading] = useState<boolean>(false);
+  const router = useRouter();
 
   const {
     register,
@@ -63,12 +65,13 @@ export default function PaymentModal({ setIsOpen, isOpen }: Props) {
       })
       .then(async (response) => {
         toast.success('Pagamento realizado com sucesso! Abra seu email', {
-          duration: 8000,
+          duration: 10000,
           position: 'top-right',
           // Custom Icon
           icon: '✅',
           className: 'bg-cricut-green',
         });
+        router.push('/obrigado');
       })
       .catch((e) => {
         toast.error(e.response?.data?.message || 'Erro a realizar pagamento', {

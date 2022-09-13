@@ -556,7 +556,6 @@ const LandingPage = () => {
                   src='https://fast.wistia.net/embed/iframe/iyg0cs19cg?seo=false&videoFoam=true'
                   title='Receitas para emagrecer Video'
                   allow='autoplay; fullscreen'
-                  allowTransparency
                   frameBorder='0'
                   scrolling='no'
                   className='wistia_embed'
