@@ -48,12 +48,6 @@ export default function PaymentModal({ setIsOpen, isOpen }: Props) {
     formState: { errors },
   } = useForm<Inputs>({
     resolver: yupResolver(schema),
-    defaultValues: {
-      email: 'emerson.yur@gmail.com',
-      fullName: 'Emerson Yuri',
-      mpesaNumber: 851755378,
-      phone: '851755378',
-    },
   });
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     setLoading(true);
